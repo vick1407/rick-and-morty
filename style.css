@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+header img {
+  width: 100px;
+}
+
+header > ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.container {
+  max-width: 1144px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.chars .filters {
+  display: grid;
+  grid-template-columns: repeat(4, 220px);
+  gap: 20px;
+}
+
+.chars .filters .filter {
+  padding: 10px 20px;
+  background: transparent;
+  border: 1px solid #2196f3;
+  border-radius: 20px;
+}
+
+.chars .chars-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 220px);
+  gap: 20px;
+  margin-top: 20px;
+}
+
+main button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background: #fff;
+  
+}
+
+/* tablets */
+@media only screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header > ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  header img {
+    margin-bottom: 10px;
+  }
+
+  .chars .filters {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .chars .chars-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* celulares */
+@media only screen and (max-width: 768px) {
+  .chars .filters .filter {
+    width: 100%;
+    display: block; 
+    margin-bottom: 10px; 
+  }
+
+  .chars .chars-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  main .chars .chars-container {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+.chars .chars-container .char {
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+
+.chars .chars-container .char:hover {
+  border: 2px solid #2196f3;
+}
+
+.chars-container .char .char-info {
+  padding: 10px;
+}
+
+.chars .chars-container .char > img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.chars .chars-container .char:hover > img {
+  transform: scale(1.1); 
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #03112c;
+}
+
+option{
+  display: block;
+  border-radius: 10px;
+  color: white;
+  background-color: #03112c;
+}
+
+input::placeholder{
+  
+  color: white;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+input{
+  outline: none;
+}
+
+select{
+  outline: none;
+}
+
+
